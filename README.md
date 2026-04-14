@@ -16,42 +16,40 @@ A modern, interactive developer portfolio built with **Next.js**, featuring smoo
 ---
 
 ## 📁 Project Structure
-app/
-├── layout.js
-└── page.js
 
-components/
-├── landing/
-│ ├── Hero.jsx
-│ ├── SplitScreen.jsx
-│ └── ThreeScene.jsx
-│
-├── robotics/
-│ ├── ProjectsGrid.jsx
-│ └── SkillsSection.jsx
-│
-├── software/
-│ ├── ProjectsGrid.jsx
-│ └── SkillsSection.jsx
-│
-└── shared/
-├── Navbar.jsx
-├── Footer.jsx
-└── TransitionWrapper.jsx
+## 📁 Project Structure
 
-data/
-├── robotics.js
-└── software.js
+- **app/**
+  - layout.js
+  - page.js
 
-lib/
-└── utils.js
+- **components/**
+  - **landing/**
+    - Hero.jsx
+    - SplitScreen.jsx
+    - ThreeScene.jsx
+  - **robotics/**
+    - ProjectsGrid.jsx
+    - SkillsSection.jsx
+  - **software/**
+    - ProjectsGrid.jsx
+    - SkillsSection.jsx
+  - **shared/**
+    - Navbar.jsx
+    - Footer.jsx
+    - TransitionWrapper.jsx
 
-public/
-├── images/
-├── icons/
-└── vedios/
+- **data/**
+  - robotics.js
+  - software.js
 
+- **lib/**
+  - utils.js
 
+- **public/**
+  - images/
+  - icons/
+  - vedios/
 ---
 
 ## 🛠️ Tech Stack
