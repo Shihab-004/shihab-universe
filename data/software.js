@@ -12,13 +12,33 @@ export const softwareData = {
   ],
   projects: [
     {
-      title: "Full Stack E-commerce",
-      description: "A complete MERN stack application with payment gateway integration.",
-      image: "/images/software-p1.jpg", // public/images এ ছবি রেখো
-      github: "https://github.com/Shihab-004",
-      live: "https://your-demo-link.com",
-      tags: ["Next.js", "MongoDB", "Stripe"]
-    },
-    // আরো প্রজেক্ট এখানে অ্যাড করো
+    title: "Shihab Universe (3D Portfolio)",
+    description:
+      "A modern 3D personal portfolio showcasing projects, skills, and achievements with immersive visuals, smooth animations, and interactive UI.",
+    image: "/images/shihab-universe.jpg",
+    github: "https://github.com/Shihab-004/shihab-universe",
+    live: "https://shihab-universe.vercel.app",
+    tags: ["Next.js", "Three.js", "Framer Motion", "Tailwind CSS"]
+  },
+  {
+    title: "Sports Carnival Management System",
+    description:
+      "A full-stack sports management platform with user authentication, event registration, and cloud-based media handling.",
+    image: "/images/sports-carnival.jpg",
+    github: "https://github.com/Shihab-004/Sports-Carnival",
+    live: "https://sports-carnival.vercel.app/",
+    tags: ["Next.js", "NextAuth", "MongoDB", "Cloudinary"]
+  },
+  {
+  title: "HilsaGuard AI",
+  description:
+    "An AI-powered environmental monitoring system developed for BUET Eco Tech Hackathon 2026. Integrates a trained machine learning model with an interactive map interface for real-time insights and analysis.",
+  image: "/images/hilsa.jpg",
+  github: "https://github.com/Shihab-004/Hackathon_Buet_2026",
+  live: "https://hilsaguard-ai.vercel.app",
+  tags: ["Next.js", "FastAPI", "Python", "Machine Learning", "Map Integration"]
+}
+
+    
   ]
 };

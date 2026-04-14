@@ -39,77 +39,90 @@ function ProjectCard({ project, index }) {
       whileHover={{ y: -12 }}
       className="group relative h-full"
     >
-      <div className="glass-card relative h-full rounded-3xl border border-zinc-800/80 bg-zinc-950/80 backdrop-blur-2xl p-8 overflow-hidden transition-all duration-500 hover:border-software-accent/50">
-        {/* Holographic Top Accent */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-software-accent via-purple-500 to-software-accent opacity-70" />
+      <div className="glass-card relative h-full rounded-3xl border border-zinc-800/80 bg-zinc-950/80 backdrop-blur-2xl overflow-hidden transition-all duration-500 hover:border-software-accent/50">
 
-        {/* Subtle Scan Line on Hover */}
-        <motion.div
-          className="absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"
-          initial={{ y: -20, opacity: 0 }}
-          whileHover={{ y: [30, 280], opacity: [0, 0.6, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-        />
+        {/* 🔥 IMAGE SECTION */}
+        <div className="relative w-full h-56 overflow-hidden">
+          <motion.img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover"
+            whileHover={{ scale: 1.08 }}
+            transition={{ duration: 0.5 }}
+          />
 
-        <div className="flex justify-between items-start mb-6">
-          <h3 className="text-2xl font-bold text-white group-hover:text-software-accent transition-colors duration-300">
-            {project.title}
-          </h3>
-
-          {/* Links with hover animation */}
-          <div className="flex gap-4 text-zinc-400 group-hover:text-white transition-all">
-            <motion.a
-              href={project.github}
-              target="_blank"
-              whileHover={{ scale: 1.2, rotate: -12 }}
-              whileTap={{ scale: 0.9 }}
-              className="hover:text-software-accent transition-colors"
-            >
-              <GitBranch size={22} />
-            </motion.a>
-            <motion.a
+          {/* Overlay on hover */}
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
+            <a
               href={project.live}
               target="_blank"
-              whileHover={{ scale: 1.2, rotate: 12 }}
-              whileTap={{ scale: 0.9 }}
-              className="hover:text-software-accent transition-colors"
+              className="px-4 py-2 bg-white text-black text-sm font-semibold rounded-lg hover:bg-software-accent hover:text-white transition"
             >
-              <ExternalLink size={22} />
-            </motion.a>
+              Live
+            </a>
+            <a
+              href={project.github}
+              target="_blank"
+              className="px-4 py-2 border border-white text-white text-sm rounded-lg hover:bg-white hover:text-black transition"
+            >
+              Code
+            </a>
           </div>
         </div>
 
-        <p className="text-zinc-400 text-[15px] leading-relaxed mb-8 min-h-[90px]">
-          {project.description}
-        </p>
+        {/* CONTENT */}
+        <div className="p-8">
+          <div className="flex justify-between items-start mb-6">
+            <h3 className="text-2xl font-bold text-white group-hover:text-software-accent transition-colors duration-300">
+              {project.title}
+            </h3>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-auto">
-          {project.tags.map((tag, i) => (
-            <motion.span
-              key={i}
-              whileHover={{ scale: 1.05, y: -1 }}
-              className="text-xs font-mono uppercase tracking-widest px-3.5 py-1.5 rounded-full 
-                         bg-zinc-900/80 border border-zinc-700/80 text-zinc-300 hover:border-software-accent/40 
-                         hover:text-software-accent transition-all duration-300"
-            >
-              {tag}
-            </motion.span>
-          ))}
+            <div className="flex gap-4 text-zinc-400 group-hover:text-white transition-all">
+              <motion.a
+                href={project.github}
+                target="_blank"
+                whileHover={{ scale: 1.2, rotate: -12 }}
+                whileTap={{ scale: 0.9 }}
+                className="hover:text-software-accent transition-colors"
+              >
+                <GitBranch size={22} />
+              </motion.a>
+              <motion.a
+                href={project.live}
+                target="_blank"
+                whileHover={{ scale: 1.2, rotate: 12 }}
+                whileTap={{ scale: 0.9 }}
+                className="hover:text-software-accent transition-colors"
+              >
+                <ExternalLink size={22} />
+              </motion.a>
+            </div>
+          </div>
+
+          <p className="text-zinc-400 text-[15px] leading-relaxed mb-6 min-h-[80px]">
+            {project.description}
+          </p>
+
+          {/* TAGS */}
+          <div className="flex flex-wrap gap-2">
+            {project.tags.map((tag, i) => (
+              <motion.span
+                key={i}
+                whileHover={{ scale: 1.05, y: -1 }}
+                className="text-xs font-mono uppercase tracking-widest px-3.5 py-1.5 rounded-full 
+                           bg-zinc-900/80 border border-zinc-700/80 text-zinc-300 
+                           hover:border-software-accent/40 hover:text-software-accent transition-all duration-300"
+              >
+                {tag}
+              </motion.span>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom Glow Effect */}
+        {/* Bottom Glow */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-software-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-        {/* Corner Accents */}
-        <div className="absolute bottom-4 right-4 w-5 h-5 border-b border-r border-software-accent/30 opacity-0 group-hover:opacity-100 transition-all duration-300" />
       </div>
-
-      {/* Card Hover Border Glow */}
-      <motion.div
-        className="absolute inset-0 rounded-3xl border border-software-accent/0 pointer-events-none"
-        whileHover={{ borderColor: "rgba(139, 92, 246, 0.4)" }}
-      />
     </motion.div>
   );
 }
+
