@@ -161,7 +161,7 @@ export default function RoboticsSkillsSection() {
               AI + ROBOTICS MATRIX
             </h2>
             <p className="text-violet-400/80 font-mono text-sm mt-1 tracking-widest">
-              INTELLIGENT SYSTEMS v2.1
+              INTELLIGENT SYSTEMS
             </p>
           </div>
         </div>

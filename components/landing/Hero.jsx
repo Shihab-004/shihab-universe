@@ -289,7 +289,7 @@ const socials = [
     },
   },
   {
-    href: "https://wa.me/8801712345678",
+    href: "https://wa.me/+8801761732465",
     icon: MessageSquare,
     label: "WhatsApp",
     color: {
@@ -483,7 +483,7 @@ export default function Hero() {
                   />
                   <span
                     style={{
-                      fontSize: "20px",
+                      fontSize: "15px",
                       fontFamily: '"Geist Mono", "JetBrains Mono", monospace',
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
